@@ -27,6 +27,7 @@ import com.pedropathing.util.Drawing;
 import java.util.Arrays;
 import java.util.List;
 
+import MechGen3839.Hardware;
 import pedroPathing.constants.*;
 
 /**
@@ -59,6 +60,8 @@ public class LocalizationTest extends OpMode {
         poseUpdater = new PoseUpdater(hardwareMap);
 
         dashboardPoseTracker = new DashboardPoseTracker(poseUpdater);
+
+        Hardware robot = Hardware.getInstance();
 
         leftFront = hardwareMap.get(DcMotorEx.class, leftFrontMotorName);
         leftRear = hardwareMap.get(DcMotorEx.class, leftRearMotorName);

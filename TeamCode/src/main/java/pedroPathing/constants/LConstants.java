@@ -4,14 +4,15 @@ package pedroPathing.constants;
 
 import com.pedropathing.localization.*;
 import com.pedropathing.localization.constants.*;
-import org.firstinspires.ftc.robotcore.external.navigation.D
+
+import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class LConstants {
 
 
     static {
-        PinpointConstants.forwardY = -146.05;
-        PinpointConstants.strafeX = 136.525;
+        PinpointConstants.forwardY = -5.75;
+        PinpointConstants.strafeX = 5.375;
         PinpointConstants.distanceUnit = DistanceUnit.INCH;
         PinpointConstants.hardwareMapName = "odo";
         PinpointConstants.useYawScalar = false;

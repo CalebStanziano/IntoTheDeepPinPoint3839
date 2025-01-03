@@ -2,6 +2,7 @@ package MechGen3839;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorController;
+import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -41,10 +42,10 @@ import com.qualcomm.robotcore.util.Range;
 public class Hardware {
 
     // Wheel motors
-    public DcMotor rf; // right front
-    public DcMotor rb; // right back
-    public DcMotor lf; // left front
-    public DcMotor lb; // left back
+    public DcMotorEx rf; // right front
+    public DcMotorEx rb; // right back
+    public DcMotorEx lf; // left front
+    public DcMotorEx lb; // left back
 
     public DcMotor lift1; // vertical lift
     public DcMotor lift2; // vertical lift
@@ -83,31 +84,31 @@ public class Hardware {
         // FRONT
 
         // right front
-        rf = hwMap.get(DcMotor.class, "m0");
-        rf.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        rf.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        rf = hwMap.get(DcMotorEx.class, "m0");
+        rf.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
+        rf.setMode(DcMotorEx.RunMode.RUN_WITHOUT_ENCODER);
         rf.setPower(0);
 
         // left front
-        lf = hwMap.get(DcMotor.class, "em0");
-        lf.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        lf = hwMap.get(DcMotorEx.class, "em0");
+        lf.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
         lf.setDirection(DcMotorSimple.Direction.REVERSE);
-        lf.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        lf.setMode(DcMotorEx.RunMode.RUN_WITHOUT_ENCODER);
         lf.setPower(0);
 
         // BACK
 
         // right back
-        rb = hwMap.get(DcMotor.class, "m2");
-        rb.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        rb.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        rb = hwMap.get(DcMotorEx.class, "m2");
+        rb.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
+        rb.setMode(DcMotorEx.RunMode.RUN_WITHOUT_ENCODER);
         rb.setPower(0);
 
         // left back
-        lb = hwMap.get(DcMotor.class, "em2");
-        lb.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        lb = hwMap.get(DcMotorEx.class, "em2");
+        lb.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
         lb.setDirection(DcMotorSimple.Direction.REVERSE);
-        lb.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        lb.setMode(DcMotorEx.RunMode.RUN_WITHOUT_ENCODER);
         lb.setPower(0);
 
         // ts = hwMap.get(TouchSensor.class, "t0");
